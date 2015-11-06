@@ -72,7 +72,7 @@ def listen_callback(data):
                     rospy.loginfo("Attibute "+choice +" could not be found:"+ str(dir(plug)))
         else:
             text=choice
-        speak_this(text)
+            speak_this(text)
 
 def face_callback(data):
     global face_detected
@@ -153,18 +153,17 @@ def main():
     print "Dialog => "+str(dialogue)
 
     rospy.loginfo("Starting questions node")
- 
+    print "#1"
     client_speak = rospy.ServiceProxy("/qbo_talk/festival_say", Text2Speach)
-
+    print "#2"
     #Set Julius
     rospy.Subscriber("/system_lang", String, system_language)
-
+    print "#3"
     #For face view
     rospy.Subscriber("/qbo_face_tracking/face_pos_and_dist", FacePosAndDist, face_callback)
-
+    print "#4"
 
     rospy.spin()
-
 
 if __name__ == '__main__':
     main()

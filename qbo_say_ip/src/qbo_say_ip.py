@@ -79,22 +79,26 @@ def sayIP():
 #
 def say(sentence):
 
-    pyFestival.festSev = pyFestival.FestivalServer()
-    pyFestival.time.sleep(2)
-    pyFestival.festCli = pyFestival.FestivalClient()
-    pyFestival.festCli.open()  
-    pyFestival.festCli.say(sentence)
-    pyFestival.festCli.close()
-    pyFestival.festSev.stop()   
+#####VVVVVVV################__WORKS__CHOICE_ONE__###########VVVVVVV####################
+    print"#1" #Debug progress marker (not important)
+    rospy.wait_for_service("/say")
+    print"#2" #Debug progress marker (not important)
+    festival = rospy.ServiceProxy("/say", Text2Speach  )
+    print"#3" #Debug progress marker (not important)
+    festival(sentence)
+#####^^^^^^^################__WORKS__CHOICE_ONE__###########^^^^^^^####################
 
-#####VVVVVVV################OLD_CODE###########VVVVVVV####################
- #   print"#1" #Debug progress marker (not important)
- #   rospy.wait_for_service("/Qbo/festivalSay")
- #   print"#2" #Debug progress marker (not important)
- #   festival = rospy.ServiceProxy("/qbo_talk/festival_say", Text2Speach  )
- #   print"#3" #Debug progress marker (not important)
- #   festival(sentence)
-#####^^^^^^^################OLD_CODE###########^^^^^^^####################
+
+#####VVVVVVV################__WORKS__CHOICE_TWO__###########VVVVVVV####################
+    #pyFestival.festSev = pyFestival.FestivalServer()
+    #pyFestival.time.sleep(2)
+    #pyFestival.festCli = pyFestival.FestivalClient()
+    #pyFestival.festCli.open()  
+    #pyFestival.festCli.say(sentence)
+    #pyFestival.festCli.close()
+    #pyFestival.festSev.stop()   
+#####^^^^^^^################__WORKS__CHOICE_TWO__###########^^^^^^^####################
+
 
 def init():
     rospy.init_node('qbo_say_ip')    
