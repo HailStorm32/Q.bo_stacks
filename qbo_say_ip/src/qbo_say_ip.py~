@@ -78,12 +78,10 @@ def sayIP():
 #        None
 #
 def say(sentence):
-
     pyFestival.festSev = pyFestival.FestivalServer()
     pyFestival.time.sleep(2)
     pyFestival.festCli = pyFestival.FestivalClient()
-    pyFestival.festCli.open()
-  
+    pyFestival.festCli.open()  
     pyFestival.festCli.say(sentence)
     pyFestival.festCli.close()
     pyFestival.festSev.stop()   

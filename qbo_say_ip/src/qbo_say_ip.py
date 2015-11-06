@@ -23,7 +23,7 @@
 
 import roslib; roslib.load_manifest('qbo_say_ip')
 import rospy
-import pyFestival
+import pyFestival # imported for use of festival class
 from std_msgs.msg import String
 from qbo_listen.msg import Listened
 from qbo_system_info.srv import AskInfo
@@ -78,6 +78,7 @@ def sayIP():
 #        None
 #
 def say(sentence):
+
     pyFestival.festSev = pyFestival.FestivalServer()
     pyFestival.time.sleep(2)
     pyFestival.festCli = pyFestival.FestivalClient()
@@ -86,13 +87,14 @@ def say(sentence):
     pyFestival.festCli.close()
     pyFestival.festSev.stop()   
 
+#####VVVVVVV################OLD_CODE###########VVVVVVV####################
  #   print"#1" #Debug progress marker (not important)
  #   rospy.wait_for_service("/Qbo/festivalSay")
  #   print"#2" #Debug progress marker (not important)
  #   festival = rospy.ServiceProxy("/qbo_talk/festival_say", Text2Speach  )
  #   print"#3" #Debug progress marker (not important)
  #   festival(sentence)
-
+#####^^^^^^^################OLD_CODE###########^^^^^^^####################
 
 def init():
     rospy.init_node('qbo_say_ip')    
