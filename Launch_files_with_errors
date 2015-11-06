@@ -1,0 +1,49 @@
+/////////////////////////////////////////////////////////////////-----READ_THIS-----//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////    																							     /////
+/////		   				    This was teseted with the following runnning in the background:      									     /////
+/////   																							     /////
+/////				1.) roscore  																			     /////
+/////				2.) roslaunch qbo_arduqbo qbo_dynamixel_with_sensors.launch  													     /////
+/////				3.) roslaunch qbo_camera qbo_stereo_node.launch 														     /////
+/////				4.) rosrun image_view image_view image:=/qbo_face_tracking/viewer   												     /////
+/////   																							     /////
+////////////////////////////////////////////////////////////////------READ_THIS----///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+./qbo_stereo_selector/launch/qbo_stereo_selector.launch
+
+./qbo_linphone/launch/launch_on_robot.launch
+
+./qbo_webi/launch/qbo_object_recognition_training.launch
+./qbo_webi/launch/qbo_webi.launch
+./qbo_webi/launch/qbo_face_recognition_training.launch
+
+./qbo_launchers/launch/qbo_startup.launch
+
+./qbo_http_api_login/launch/phone_services.launch
+
+=-=-=-=-=-=-=-=-=-=VVVVVVVVVVVV=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-CV_BRIDGE ERROR=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-VVVVVVVVVVVVVV=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+./qbo_stereo_anaglyph/stereo_anaglyph/pr2_wide_stereo_view.launch
+./qbo_stereo_anaglyph/stereo_anaglyph/pr2_narrow_stereo_view.launch
+./qbo_stereo_anaglyph/hrl_camera/deprecated/theora_camera.launch
+./qbo_stereo_anaglyph/hrl_camera/deprecated/eleb_camera.launch
+
+=-=-=-=-=-=-=-=-=-=-^^^^^^^^^^^-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=CV_BRIDGE ERROR-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=^^^^^^^^^^^^=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+
+=-=-=-=-=-=VVVVVVVVVVVV=-=-=-=-=-=-=-=-=-=-=-=-=-=UN_TESETED-=-=-=-=-=-=-=-=-=-=-VVVVVVVVVVV=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+./qbo_music_player/launch/hand_gesture_calib.launch
+./qbo_music_player/launch/hand_gesture_node.launch
+
+./qbo_random_move/launch/random_move_face_demo.launch
+
+./qbo_face_vision/qbo_face_recognition/launch/qbo_face_track_and_follow_move_base.launch
+
+
+
+

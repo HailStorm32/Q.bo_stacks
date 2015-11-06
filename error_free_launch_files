@@ -1,0 +1,42 @@
+///////////////////////////////////////////////////////////////////////------READ_THIS------//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////    																							     /////
+/////					       	       This was tested with the following running in the background:  										     /////
+/////    																							     /////
+/////					1.) roscore   																		     /////
+/////					2.) roslaunch qbo_arduqbo qbo_dynamixle_with_sensors.launch   												     /////
+/////					3.) roslaunch qbo_camera qbo_stereo_node.launch      													     /////
+/////					4.) rosrun image_view image_view image:=/qbo_face_tracking/viewer 											     /////
+/////                  																						     /////
+///////////////////////////////////////////////////////////////////////------READ_THIS------//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+./qbo_camera/launch/qbo_cameras_stereo_calibration_2.launch
+./qbo_camera/launch/qbo_stereo_node.launch
+./qbo_camera/launch/qbo_cameras_stereo_calibration.launch
+
+./qbo_arduqbo/launch/qbo.launch
+./qbo_arduqbo/launch/qbo_dynamixel_with_sensors.launch
+./qbo_arduqbo/launch/qbo_dynamixel.launch
+./qbo_arduqbo/launch/qbo_with_sensors.launch
+
+./qbo_listen/launch/voice_recognizer.launch
+
+./qbo_say_ip/launch/qbo_say_ip.launch
+
+./qbo_brain/launch/default_state.launch  (has a error, but still works)
+
+./qbo_face_vision/qbo_face_tracking/launch/qbo_face_tracking.launch
+./qbo_face_vision/qbo_face_following/launch/qbo_face_following.launch
+./qbo_face_vision/qbo_face_recognition/launch/qbo_face_track_and_follow.launch
+./qbo_face_vision/qbo_face_recognition/launch/qbo_face_recognition_demo.launch (has error, but still works)
+./qbo_face_vision/qbo_face_recognition/launch/qbo_face_recognition.launch
+
+./qbo_audio_control/launch/audio_control_sip.launch
+./qbo_audio_control/launch/audio_control_listener.launch
+
+./qbo_object_recognition/launch/object_recognition_demo.launch
+
+./qbo_questions/launch/qbo_questions.launch
+
+

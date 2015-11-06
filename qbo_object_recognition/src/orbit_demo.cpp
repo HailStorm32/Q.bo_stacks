@@ -515,7 +515,7 @@ int main(int argc, char **argv)
 
 
 
-	client_talker = private_nh_->serviceClient<qbo_talk::Text2Speach>("/qbo_talk/festival_say_no_wait");
+	client_talker = private_nh_->serviceClient<qbo_talk::Text2Speach>("/say"); ///qbo_talk/festival_say_no_wait
 	client_self_recognizer = private_nh_->serviceClient<qbo_self_recognizer::QboRecognize>("qbo_self_recognizer/recognize");
 	client_learn = private_nh_->serviceClient<qbo_object_recognition::LearnNewObject>("/qbo_object_recognition/learn");
 	client_teach = private_nh_->serviceClient<qbo_object_recognition::Teach>("/qbo_object_recognition/teach");

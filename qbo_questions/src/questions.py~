@@ -154,7 +154,7 @@ def main():
 
     rospy.loginfo("Starting questions node")
     print "#1"
-    client_speak = rospy.ServiceProxy("/say", Text2Speach)
+    client_speak = rospy.ServiceProxy("/qbo_talk/say", Text2Speach)
     print "#2"
     #Set Julius
     rospy.Subscriber("/system_lang", String, system_language)

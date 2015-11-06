@@ -371,7 +371,7 @@ void listenerCallback(const qbo_listen::ListenedConstPtr& msg)
 int main(int argc, char **argv)
 {
 	
-	cout << "#1" << endl;
+	cout << "#1" << endl; //Debug progress marker (not important)
 
 	ros::init(argc, argv, "qbo_face_recognition_demo");
 
@@ -385,19 +385,19 @@ int main(int argc, char **argv)
 		ROS_INFO("System language loaded -> %s", init_lang.c_str());
 	}
 	
-	cout << "#2" << endl;
+	cout << "#2" << endl; //Debug progress marker (not important)
 	/*
 	* Load dictionary
 	*/
 	loadDictionary(init_lang);
 	
-	cout << "#3" << endl;
+	cout << "#3" << endl; //Debug progress marker (not important)
 	/*
 	* Subscribe to system languange topic 
 	*/
 	system_lang_sub= private_nh_->subscribe<std_msgs::String>("/system_lang",1,&system_langCallback);
 	
-	cout << "#4" << endl;
+	cout << "#4" << endl; //Debug progress marker (not important)
 	/*
 	 * Set service client for qbo talker
 	 */

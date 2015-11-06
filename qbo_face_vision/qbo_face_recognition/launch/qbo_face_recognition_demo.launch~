@@ -43,8 +43,8 @@
         <param name="/qbo_face_recognition/pca_image_width" value="100" />
 	
 	<!-- Face Recognition Demo to answer questions and to learn faces -->
-	<node name="qbo_face_recognizer_demo" pkg="qbo_face_recognition" type="face_recognizer_demo" output="screen" >
+	<node name="face_recognizer_demo" pkg="qbo_face_recognition" type="face_recognizer_demo" output="screen" >
 	 </node>
-	 <param name="/qbo_face_recognition_demo/wait_for_name_tolerance" value="4.0" />
+	 <param name="/face_recognition_demo/wait_for_name_tolerance" value="4.0" />
 
 </launch>
