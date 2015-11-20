@@ -60,6 +60,8 @@
 #include <boost/algorithm/string.hpp>
 #include "boost/filesystem.hpp"   // includes all needed Boost.Filesystem declarations
 
+//#include <rospy>  // COME BACK TO LATTER (FOR void speak_this)
+
 using namespace std;
 
 map<string, string> dictionary;
@@ -147,6 +149,20 @@ int loadDictionary(string lang)
 /*
  * Method that, by receiving a string, makes the robot talk that string
  */
+
+
+void speak_this(string to_speak)
+{
+	srv_talker.request.command = to_speak;
+
+	if (client_talker.call(/say))
+		ROS_INFO("Talked: %s", to_speak.c_str());
+	else
+		ROS_ERROR("Failed to call the service of qbo_talk");
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////
 void speak_this(string to_speak)
 {
 	srv_talker.request.command = to_speak;
@@ -156,7 +172,7 @@ void speak_this(string to_speak)
 	else
 		ROS_ERROR("Failed to call the service of qbo_talk");
 }
-
+*/////////////////////////////////////////////////////////////////////////////////
 
 
 /*
