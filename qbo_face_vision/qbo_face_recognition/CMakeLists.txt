@@ -33,5 +33,6 @@ rosbuild_add_executable(qbo_face_recognition src/face_recognizer.cpp src/person.
 rosbuild_add_executable(qbo_face_recognition src/face_recognizer_demo.cpp)
 
 target_link_libraries(qbo_face_recognition libboost_filesystem.so libboost_system.so)
-target_link_libraries(qbo_face_recognition libboost_filesystem.so libboost_system.so libboost_regex.so)
+target_link_libraries(qbo_face_recognition libboost_filesystem.so libboost_system.so)
 
+#libboost_regex.so
