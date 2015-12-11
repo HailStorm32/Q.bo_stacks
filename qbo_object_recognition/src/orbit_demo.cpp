@@ -96,7 +96,7 @@ ros::Time last_object_received_;
 bool learn_request = false;
 string object_to_learn = "";
 
-string objects_path = "/opt/ros/electric/stacks/qbo_stack/qbo_object_recognition/objects/objects_db/";
+string objects_path = "/opt/ros/hydro/stacks/qbo_object_recognition/objects/objects_db/";
 
 void listenerCallback(const qbo_listen::ListenedConstPtr& msg);
 
