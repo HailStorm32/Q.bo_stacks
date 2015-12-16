@@ -1,8 +1,6 @@
 #
 # Software License Agreement (GPLv2 License)
 #
-# Copyright (c) 2012 OpenQbo, Inc.
-#
 # This program is free software; you can redistribute it and/or 
 # modify it under the terms of the GNU General Public License as 
 # published by the Free Software Foundation; either version 2 of
@@ -18,9 +16,9 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
 # MA 02110-1301, USA.
 #
-# Authors: Miguel Angel Julian <miguel.a.j@openqbo.com>; 
+# Authors: Vincent FOUCAULT 2014 <elpimous12@orange.fr>
 #
 
-string command
+string sentence
 ---
 bool result

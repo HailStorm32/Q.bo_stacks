@@ -1,33 +1,20 @@
-qbo_talk v1.0
-28-02-2012
-
-=== Copyright ===
-
-Copyright (C) 2012 Thecorpora Inc.
-
-=== Description  ===
-
-Node that integrate Festival and Ros
-
-=== Building ===
-
-rosmake
-
-=== Run ===
+# This is a Espeak wrapper for QBO robot from THE CORPORA
+# It uses Mbrola to produce nice voice.
+# Actually it's in French, but it's easy to change :
+#	download your model voices, and change "fr_speak" line content to feet your need
+#       ( replace "fr1" by "en" or "es"....)
+#
 
 
-=== Arvhive Contents ===
+Open a terminal :
 
+sudo apt-get install espeak
+sudo apt-get install mbrola
 
+search on web for mbrola voices, you have very good voices english, spanish, french... Quite better than festival
 
-=== Changelog ===
+this node creates a service called "/say"
 
-qbo_talk v1.0
+ When neo_talk is running, you can make QBO speak with this, in terminal command : rosservice call /say "Salut a tous"
 
-=== Homepage ===
-
-http://openqbo.org/wiki/doku.php?id=qbo_apps:ros_pack:qbo_talk
-
-=== Contact ===
-
-Miguel Angel Julian <miguel.a.j@openqbo.org>
+Enjoy

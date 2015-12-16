@@ -24,6 +24,7 @@
 
 import roslib; roslib.load_manifest('qbo_say_ip')
 import rospy
+import pyFestival
 from std_msgs.msg import String
 from qbo_listen.msg import Listened
 from qbo_system_info.srv import AskInfo

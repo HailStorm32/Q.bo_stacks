@@ -1,15 +1,22 @@
 <package>
-  <description brief="qbo_talk">
 
-     qbo_talk
+    <description brief="A new QBO_talk, using espeak and mbrola ! ">
 
-  </description>
-  <author>Miguel Angel Julian</author>
-  <license>GPLv2</license>
-  <review status="unreviewed" notes=""/>
-  <url>http://openqbo.org/wiki/doku.php?id=qbo_apps:ros_pack:qbo_talk</url>
-  <depend package="rospy"/>
+    Espeak and Mbrola produce a better voice than festival, 
+    and festival doesn't provide voices like French.
+
+    </description>
+    <author>Vincent FOUCAULT</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    <url>http://ros.org/wiki/espeak</url>
+
+    <depend package="rospy" />
+    <depend package="std_msgs" />
+    <depend package="std_srvs" />
+    <rosdep name="qbo_talk" />
 
 </package>
+
 
 

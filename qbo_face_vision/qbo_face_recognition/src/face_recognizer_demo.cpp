@@ -149,7 +149,7 @@ int loadDictionary(string lang)
  */
 void speak_this(string to_speak)
 {
-	srv_talker.request.command = to_speak;
+	srv_talker.request.sentence = to_speak;
 
 	if (client_talker.call(srv_talker))
 		ROS_INFO("Talked: %s", to_speak.c_str());
