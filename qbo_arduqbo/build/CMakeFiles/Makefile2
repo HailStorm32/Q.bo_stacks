@@ -755,19 +755,19 @@ clean: CMakeFiles/nose_controller_lib.dir/clean
 
 # All Build rule for target.
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/rosbuild_precompile.dir/all
-CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/libdxl.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/dynamixel.dir/all
+CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/libdxl.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/qboduino_driver_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/battery_controller_lib.dir/all
+CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/lcd_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/base_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/joint_controller_lib.dir/all
-CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/lcd_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/mics_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/mouth_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/nose_controller_lib.dir/all
-CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/irs_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/srf10_controller_lib.dir/all
 CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/imu_controller_lib.dir/all
+CMakeFiles/qbo_arduqbo.dir/all: CMakeFiles/irs_controller_lib.dir/all
 	$(MAKE) -f CMakeFiles/qbo_arduqbo.dir/build.make CMakeFiles/qbo_arduqbo.dir/depend
 	$(MAKE) -f CMakeFiles/qbo_arduqbo.dir/build.make CMakeFiles/qbo_arduqbo.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/stacks/qbo_arduqbo/build/CMakeFiles  60
@@ -1132,8 +1132,8 @@ clean: CMakeFiles/run_tests.dir/clean
 
 # All Build rule for target.
 CMakeFiles/servos_lib.dir/all: CMakeFiles/rosbuild_precompile.dir/all
-CMakeFiles/servos_lib.dir/all: CMakeFiles/libdxl.dir/all
 CMakeFiles/servos_lib.dir/all: CMakeFiles/dynamixel.dir/all
+CMakeFiles/servos_lib.dir/all: CMakeFiles/libdxl.dir/all
 	$(MAKE) -f CMakeFiles/servos_lib.dir/build.make CMakeFiles/servos_lib.dir/depend
 	$(MAKE) -f CMakeFiles/servos_lib.dir/build.make CMakeFiles/servos_lib.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/stacks/qbo_arduqbo/build/CMakeFiles  62

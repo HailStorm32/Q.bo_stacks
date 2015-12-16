@@ -21,6 +21,7 @@
 #
 # Authors: Miguel Angel Julian <miguel.a.j@openqbo.com>; 
 #
+
 # -*- coding: utf-8 -*-
 
 import os

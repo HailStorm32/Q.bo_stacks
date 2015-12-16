@@ -11,11 +11,6 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "/opt/ros/hydro/stacks/qbo_say_ip/include"
-  "/opt/ros/hydro/stacks/qbo_listen/msg_gen/cpp/include"
-  "/opt/ros/hydro/stacks/qbo_listen/srv_gen/cpp/include"
-  "/opt/ros/hydro/stacks/qbo_talk/srv_gen/cpp/include"
-  "/opt/ros/hydro/stacks/qbo_system_info/srv_gen/cpp/include"
-  "/opt/ros/hydro/include"
   "/usr/src/gtest/include"
   "/usr/src/gtest"
   )

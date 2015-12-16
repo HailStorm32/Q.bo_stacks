@@ -56,6 +56,7 @@
 #include <qbo_face_msgs/FacePosAndDist.h>
 
 
+
 #include <boost/algorithm/string.hpp>
 #include "boost/filesystem.hpp"   // includes all needed Boost.Filesystem declarations
 
@@ -86,7 +87,7 @@ int num_images_to_hold_ = 20;
 double wait_for_name_tolerance_ = 4.0;
 
 
-string new_persons_path_ = "/opt/ros/hydro/stacks/qbo_face_vision/qbo_face_recognition/faces/new_faces";
+string new_persons_path_ = "/opt/ros/electric/stacks/qbo_stack/qbo_face_vision/qbo_face_recognition/faces/new_faces";
 
 bool learn_request = false;
 string name_to_learn_ = "";
@@ -148,28 +149,13 @@ int loadDictionary(string lang)
  */
 void speak_this(string to_speak)
 {
-	srv_talker.request.command = to_speak; 
+	srv_talker.request.command = to_speak;
 
 	if (client_talker.call(srv_talker))
 		ROS_INFO("Talked: %s", to_speak.c_str());
 	else
 		ROS_ERROR("Failed to call the service of qbo_talk");
-}  
-
-/*
-
-void speak_this(string to_speak)
-{
-	srv_talker.request.command = to_speak; 
-
-	if (client_talker.call(srv_talker))
-		ROS_INFO("Talked: %s", to_speak.c_str());
-	else
-		ROS_ERROR("Failed to call the service of qbo_talk");
-} 
-
-*/
-
+}
 
 
 
@@ -384,9 +370,6 @@ void listenerCallback(const qbo_listen::ListenedConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-	
-	cout << "#1" << endl; //Debug progress marker (not important)
-
 	ros::init(argc, argv, "qbo_face_recognition_demo");
 
 	private_nh_ = new ros::NodeHandle;
@@ -398,24 +381,22 @@ int main(int argc, char **argv)
 	{
 		ROS_INFO("System language loaded -> %s", init_lang.c_str());
 	}
-	
-	cout << "#2" << endl; //Debug progress marker (not important)
+
 	/*
 	* Load dictionary
 	*/
 	loadDictionary(init_lang);
-	
-	cout << "#3" << endl; //Debug progress marker (not important)
+
 	/*
 	* Subscribe to system languange topic 
 	*/
 	system_lang_sub= private_nh_->subscribe<std_msgs::String>("/system_lang",1,&system_langCallback);
 	
-	cout << "#4" << endl; //Debug progress marker (not important)
+
 	/*
 	 * Set service client for qbo talker
 	 */
-	client_talker = private_nh_->serviceClient<qbo_talk::Text2Speach>("/say");
+	client_talker = private_nh_->serviceClient<qbo_talk::Text2Speach>("/qbo_talk/festival_say");
 
 	/*
 	 * Set service clients for face recognition

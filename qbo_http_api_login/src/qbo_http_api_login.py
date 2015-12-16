@@ -427,7 +427,7 @@ class qbo_sip_functions():
 
         self.envi = environ.copy()
         path = self.envi["PYTHONPATH"]
-        self.envi["PYTHONPATH"] = "/opt/ros/hydro/stacks/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip:/opt/ros/hydro/stacks/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip/src:/opt/ros/hydro/stacks/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip/src/app:/opt/ros/hydro/stacks/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip/src/external:/opt/ros/hydro/stacks/qbo_webi/src/teleoperation/sip2rtmp/rtmplite:"+path
+        self.envi["PYTHONPATH"] = "/opt/ros/electric/stacks/qbo_stack/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip:/opt/ros/electric/stacks/qbo_stack/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip/src:/opt/ros/electric/stacks/qbo_stack/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip/src/app:/opt/ros/electric/stacks/qbo_stack/qbo_webi/src/teleoperation/sip2rtmp/p2p-sip/src/external:/opt/ros/electric/stacks/qbo_stack/qbo_webi/src/teleoperation/sip2rtmp/rtmplite:"+path
 
 
         self.auth = "notDefined"
