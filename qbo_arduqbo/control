@@ -1,8 +1,8 @@
-Package: qboros-electric-qbo-arduqbo
-Source: qboros-electric-qbo-arduqbo
+Package: qboros-hydro-qbo-arduqbo
+Source: qboros-hydro-qbo-arduqbo
 Version: 1.1.1-openqbo0
 Section: OpenQbo
-Depends: qboros-electric-qbo-cereal-port
+Depends: qboros-hydro-qbo-cereal-port
 Priority: standard
 Architecture: amd64
 Maintainer: Miguel Angel Julian <miguel.a.j@openqbo.org>

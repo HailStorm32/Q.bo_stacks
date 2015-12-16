@@ -1,7 +1,7 @@
 
 Version: 1.0-openqbo0
 Section: OpenQbo
-Depends: python, ros-electric-ros, linphone-nox
+Depends: python, ros-hydro-ros, linphone-nox
 Priority: standard
 Architecture: amd64
 Maintainer: Sergio Merino <s.merino@openqbo.org>

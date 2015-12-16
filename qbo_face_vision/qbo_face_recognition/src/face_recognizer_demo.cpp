@@ -87,7 +87,7 @@ int num_images_to_hold_ = 20;
 double wait_for_name_tolerance_ = 4.0;
 
 
-string new_persons_path_ = "/opt/ros/electric/stacks/qbo_stack/qbo_face_vision/qbo_face_recognition/faces/new_faces";
+string new_persons_path_ = "/opt/ros/hydro/stacks/qbo_face_vision/qbo_face_recognition/faces/new_faces";
 
 bool learn_request = false;
 string name_to_learn_ = "";
@@ -149,9 +149,9 @@ int loadDictionary(string lang)
  */
 void speak_this(string to_speak)
 {
-	srv_talker.request.sentence = to_speak;
+	srv_talker.request.sentence = "Hello"; ///to_speak
 
-	if (client_talker.call(srv_talker))
+	if (client_talker.call(srv_talker)) //srv_talker
 		ROS_INFO("Talked: %s", to_speak.c_str());
 	else
 		ROS_ERROR("Failed to call the service of qbo_talk");
